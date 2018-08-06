@@ -1,0 +1,91 @@
+.maneuver {
+    float: left;
+    text-align: center;
+    color: black;
+    border-style: solid;
+    border-width: 2px;
+    height: 200px;
+    width: 150px;
+}
+.maneuver:hover{
+    background-color: beige;
+    opacity: 0.9;
+    border-width: 4px;
+}
+
+.talon {
+    float: left;
+    text-align: center;
+    color: black;
+    border-style: solid;
+    border-width: 2px;
+    height: 200px;
+    width: 150px;
+}
+.talon:hover{
+    background-color: beige;
+    opacity: 0.9;
+    border-width: 4px;
+}
+
+.wastePile {
+    float: left;
+    text-align: center;
+    color: black;
+    border-style: solid;
+    border-width: 2px;
+    height: 200px;
+    width: 150px;
+}
+.wastePile:hover{
+    background-color: beige;
+    opacity: 0.9;
+    border-width: 4px;
+}
+
+.foundation {
+    float: right;
+    text-align: center;
+    color: black;
+    border-style: solid;
+    border-width: 2px;
+    height: 200px;
+    width: 150px;
+}
+.foundation:hover{
+    background-color: beige;
+    opacity: 0.9;
+    border-width: 4px;
+}
+.card {
+    background-color: rgb(74, 201, 252);
+    text-align: center;
+    color: black;
+    border-style: solid;
+    border-width: 2px;
+    height: 20px;
+    width: 10px;
+}
+.card:hover{
+    border-color: rgb(0, 89, 255);
+    opacity: 0.9;
+    border-width: 4px;
+}
+.card:selected {
+    border-color: rgb(0, 89, 255);
+    opacity: 0.9;
+    border-width: 4px;
+  }
+
+.button {
+    color: black;
+}
+
+#div1, #div2 {
+    float: left;
+    width: 100px;
+    height: 35px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}

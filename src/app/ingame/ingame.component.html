@@ -1,0 +1,41 @@
+<div class="talon" (click)="drawTalon()">
+    Talon has {{ Deck.length}} cards
+    <ul *ngIf="!Deck.length">
+      Reload talon
+    </ul>
+</div>
+
+<div class="wastePile">
+  Waste Pile has {{WastePile.length}} cards
+     <ul *ngIf="WastePile.length">
+        <span class="card" *ngIf="WastePile.length >= 3">
+          {{WastePile[2].suit}}-{{WastePile[2].rank}}
+        </span>
+        <span class="card" *ngIf="WastePile.length >= 2">
+          {{WastePile[1].suit}}-{{WastePile[1].rank}}
+        </span>
+        <span id="W--" class="card" draggable="true" (dragstart)="drag($event)">
+          {{WastePile[0].suit}}-{{WastePile[0].rank}}
+        </span>
+     </ul>
+</div>
+
+
+<div id="F{{i}}" class="foundation" *ngFor="let pile of Foundation; let i = index" (drop)="drop($event)" (dragover)="allowDrop($event)">
+  <span class="card" *ngIf="pile.length" (drop)="drop($event)" (dragover)="allowDrop($event)">
+    {{ pile[pile.length-1].suit }}-{{ pile[pile.length-1].rank}}
+  </span>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div id="M{{i}}" class="maneuver" *ngFor="let col of Maneuver; let i = index" (drop)="drop($event)" (dragover)="allowDrop($event)">
+  <ul *ngFor="let card of col; let ii = index">
+    <span id="{{i}}" class="card" *ngIf="!card.face" (click)="flip($event)">
+      X-X
+    </span>
+    <span id="M{{i}}{{ii}}" class="card" *ngIf="card.face" draggable="true" (dragstart)="drag($event)" (drop)="drop($event)" (dragover)="allowDrop($event)">
+      {{ card.suit }}-{{ card.rank }}
+    </span> 
+  </ul>
+</div>
